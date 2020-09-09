@@ -6,3 +6,4 @@ tasks:
     command: yarn dev
   - init: pip install wsgidav cheroot && mkdir dload
     command: wsgidav --host=0.0.0.0 --port=8080 --root=/workspace/xxx/dload --auth=anonymous
+  - init: brew install aria2
