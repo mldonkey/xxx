@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: shaowenchen/debugger-action@master
+    - uses: shaowenchen/debugger-action@v2
       name: debugger
       timeout-minutes: 360
       continue-on-error: true
