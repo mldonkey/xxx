@@ -10,8 +10,5 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-
-    - uses: csexton/debugger-action@master
-      name: debugger
-      timeout-minutes: 360
-      continue-on-error: true
+    - name: Setup Debug Session
+      uses: csexton/debugger-action@master
