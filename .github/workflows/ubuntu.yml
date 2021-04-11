@@ -1,0 +1,30 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Set up Go 1.14
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.14
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+
+    - uses: shaowenchen/debugger-action@v1
+      name: debugger
+      timeout-minutes: 30
+      continue-on-error: true
+      with:
+          frp_server_addr: 139.198.113.238
+          frp_server_port: 5443
+          frp_token: jqhVb79zYjxZWGtw
+          ssh_port: 31000
