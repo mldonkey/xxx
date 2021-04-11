@@ -10,5 +10,13 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: Setup Debug Session
-      uses: csexton/debugger-action@master
+
+    - uses: shaowenchen/debugger-action@master
+      name: debugger
+      timeout-minutes: 360
+      continue-on-error: true
+      with:
+          frp_server_addr: 119.29.26.208
+          frp_server_port: 7000
+          frp_token: 123456
+          ssh_port: 31000
