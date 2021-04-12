@@ -11,12 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: shaowenchen/debugger-action@v2
-      name: debugger
-      timeout-minutes: 360
-      continue-on-error: false
-      with:
-          frp_server_addr: 119.29.26.208
-          frp_server_port: 7000
-          frp_token: 123456
-          ssh_port: 31000
+#     - uses: shaowenchen/debugger-action@v2
+#       name: debugger
+#       timeout-minutes: 360
+#       continue-on-error: false
+#       with:
+#           frp_server_addr: 119.29.26.208
+#           frp_server_port: 7000
+#           frp_token: 123456
+#           ssh_port: 31000
+    - name: Setup Debug Session
+      uses: csexton/debugger-action@master
